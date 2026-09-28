@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8e4b0">
+  <title>Dry Land</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="board" aria-label="Game board"></canvas>
+
+  <header class="hud hud-top">
+    <div class="hud-left">
+      <h1 class="title">Dry Land</h1>
+      <div class="level" id="levelLabel">Level 1</div>
+    </div>
+    <div class="hud-right">
+      <div class="stat"><span class="stat-label">Moves</span> <span id="movesLabel">0</span></div>
+      <div class="stat"><span class="stat-label">Par</span> <span id="parLabel">0</span></div>
+    </div>
+  </header>
+
+  <div class="message" id="message" aria-live="polite"></div>
+
+  <div class="banner" id="banner" aria-live="polite">
+    <div class="banner-title" id="bannerTitle">Level cleared</div>
+    <div class="banner-sub" id="bannerSub"></div>
+    <div class="banner-perfect" id="bannerPerfect"></div>
+  </div>
+
+  <footer class="hud hud-bottom">
+    <button class="btn" id="resetBtn" type="button" aria-label="Reset level">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7" /><path d="M4 3.5V8h4.5" /></svg>
+      <span>Reset</span>
+    </button>
+    <button class="btn" id="hintBtn" type="button" aria-label="Show a hint">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2V16h5v-.1c0-.8.4-1.5 1-2A6 6 0 0 0 12 3z" /></svg>
+      <span>Hint</span>
+    </button>
+    <button class="btn btn-icon" id="muteBtn" type="button" aria-label="Mute sound" aria-pressed="false">
+      <svg class="icon-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" /></svg>
+      <svg class="icon-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" /><path d="M17 9.5l5 5M22 9.5l-5 5" /></svg>
+    </button>
+  </footer>
+
+  <div class="overlay" id="menu">
+    <div class="card">
+      <h2 class="card-title">Dry Land</h2>
+      <p class="card-tagline">Your job is to get rid of all the water.</p>
+      <p class="card-text" id="ruleText">Click a tile to flip it together with its four neighbours: water turns into land and land turns back into water. Drain every tile to clear the level.</p>
+      <div class="card-buttons">
+        <button class="btn btn-primary" id="playBtn" type="button">Play</button>
+        <button class="btn" id="newGameBtn" type="button">New game</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

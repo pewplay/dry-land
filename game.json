@@ -1,0 +1,68 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Dry Land",
+  "description": "Drain a flooded polder by flipping tiles and their neighbours in Dry Land, a free isometric logic puzzle you can play in your browser.",
+  "about": "Dry Land is a calm little puzzle about keeping the land dry. Every tile of the polder has a grassy side and a watery side, and pressing one flips it together with its four neighbours. Your job is to turn every tile to land, which is harder than it sounds because each move also undoes the tiles around it.\n\nThe game starts with gentle 4×4 fields and moves on to full 6×6 polders with symmetric patterns, then keeps going with endless generated levels that grow trickier. Each level shows its par, the smallest number of moves that solves it, so you can chase a perfect clear. Hover a tile to preview which ones will flip, and use a hint when you are stuck.\n\nOriginally created by Rick van Mook for js13kGames 2015 as Dutch Dredge.",
+  "howToPlay": "Pressing a tile flips it and the tiles directly above, below, left and right of it between water and land. Turn every tile to green land to clear the level and move on to the next polder. Try to match the par move count, and use Reset to start the level over.",
+  "controls": [
+    {
+      "input": "Click / Tap",
+      "action": "Flip a tile and its four neighbours"
+    },
+    {
+      "input": "Mouse hover",
+      "action": "Preview which tiles will flip"
+    },
+    {
+      "input": "Arrow keys + Enter",
+      "action": "Move the cursor and flip a tile"
+    },
+    {
+      "input": "R / H / M",
+      "action": "Reset level, show a hint, mute sound"
+    },
+    {
+      "input": "On-screen buttons",
+      "action": "Reset, hint and sound"
+    }
+  ],
+  "tips": [
+    "Pressing the same tile twice cancels itself out, so the order of your moves never matters.",
+    "Chase the water row by row: for every wet tile in one row, press the tile next to it in the following row.",
+    "On symmetric levels, the solution is usually symmetric too.",
+    "If you are far over par, reset the level instead of digging deeper."
+  ],
+  "faq": [
+    {
+      "question": "Is Dry Land free to play?",
+      "answer": "Yes. It is completely free and runs in your browser with no download or sign-up."
+    },
+    {
+      "question": "Can I play Dry Land on a phone or tablet?",
+      "answer": "Yes. Tap tiles to flip them; on a tall portrait screen the polder turns to face you so the tiles stay big enough to tap comfortably."
+    },
+    {
+      "question": "Is every level solvable?",
+      "answer": "Yes. The eight original levels and all generated levels always have a solution, and the par shows the fewest moves needed."
+    }
+  ],
+  "category": "Puzzle",
+  "tags": [
+    "puzzle",
+    "logic",
+    "lights out",
+    "isometric",
+    "polder"
+  ],
+  "author": "Rick van Mook",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": [
+    "screenshots/1.png",
+    "screenshots/2.png",
+    "screenshots/3.png"
+  ],
+  "added": "2026-09-28",
+  "draft": false
+}
